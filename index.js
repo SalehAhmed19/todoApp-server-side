@@ -35,12 +35,12 @@ async function run() {
     //   res.send(car);
     // });
     // /* single car delete API */
-    // app.delete("/cars/:id", async (req, res) => {
-    //   const id = req.params.id;
-    //   const query = { _id: ObjectId(id) };
-    //   const result = await carsCollection.deleteOne(query);
-    //   res.send(result);
-    // });
+    app.delete("/task/:id", async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: ObjectId(id) };
+      const result = await tasksCollection.deleteOne(query);
+      res.send(result);
+    });
     /* new car insert API */
     app.post("/task", async (req, res) => {
       const newTask = req.body;
