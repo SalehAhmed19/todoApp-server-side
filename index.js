@@ -41,12 +41,12 @@ async function run() {
     //   const result = await carsCollection.deleteOne(query);
     //   res.send(result);
     // });
-    // /* new car insert API */
-    // app.post("/cars", async (req, res) => {
-    //   const newCar = req.body;
-    //   const result = await carsCollection.insertOne(newCar);
-    //   res.send(result);
-    // });
+    /* new car insert API */
+    app.post("/task", async (req, res) => {
+      const newTask = req.body;
+      const result = await tasksCollection.insertOne(newTask);
+      res.send(result);
+    });
     // /* my items get API */
     // app.get("/my-items", verifyJwt, async (req, res) => {
     //   const email = req.query.email;
